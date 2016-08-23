@@ -1,0 +1,9 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/application.conf,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/evolutions,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/logback.xml,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/routes,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/evolutions/default,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/evolutions/default/1.sql,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/evolutions/default/1.sql)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/evolutions/default/2.sql,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/evolutions/default/2.sql)[0m
+[0m[[0mdebug[0m] [0m	(/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/conf/evolutions/default/3.sql,/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/target/scala-2.11/classes/evolutions/default/3.sql)[0m

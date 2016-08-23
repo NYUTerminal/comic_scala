@@ -1,0 +1,162 @@
+@(comicForm: Form[model.ComicFormData],comics : Seq[model.Comic])(implicit request: RequestHeader)
+@main() {
+
+    <form id="comic-data-form" role="form" action='@routes.ComicController.addComic()' method="post" class="form-horizontal" align="center" autocomplete="off">
+
+        <fieldset class="comic-fieldset">
+
+            <div class="comic-form">
+                <label class="form-title" style="color: #F8741B; font-size: 22px;font-weight: bold; text-decoration:none">Comics Store</label>
+            </div>
+            <br/>
+            <table align="center" cellspacing="20">
+                <tr>
+                    <td align="left">
+                        <div class="comic-form" id="firstName_field_label">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <strong>name</strong> :
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="comic-form" id="firstName_field_value">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <input type="text" id="name" name="name" value="" placeholder="First Name" class="form-control input-lg" required>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="comic-form" id="lastName_field_label">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <strong>description</strong> :
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="comic-form" id="lastName_field_value">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <input type="text" id="description" name="description" value="" placeholder="Last Name" class="form-control input-lg" required>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="comic-form" id="mobile_field_label">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <strong>published on</strong> :
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="comic-form" id="mobile_field_value">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <input type="date" id="publishedOn" name="publishedOn" placeholder="Mobile" class="form-control input-lg" required>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <div class="comic-form" id="email_field_label">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <strong>categories</strong> :
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td align="center">
+                        <div class="comic-form" id="email_field_value">
+                            <div class="controls col-xs-offset-3 col-xs-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-comic"></span></span>
+                                    <input type="text" id="categories" name="categories" placeholder="Email" class="form-control input-lg" required>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <div class="form-actions controls ynt-btn-xlarge">
+                <button type="submit" class="btn btn-primary ynt-btn-orange">Add</button>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <div class="comic-display" >
+        <fieldset>
+            <legend align="center"><h3>Registered Comics</h3></legend>
+            <table cellspacing="20">
+                <tr>
+                    <th>comicid</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Published On</th>
+                    <th>Categories</th>
+                </tr>
+                @for(comic <- comics){
+                    <tr>
+                        <td>@comic.id</td>
+                        <td>@comic.name</td>
+                        <td>@comic.description</td>
+                        <td>@comic.publishedOn</td>
+                        <td>@comic.categories</td>
+                        <td><a href="@routes.ComicController.deleteComic(comic.id)">delete</a></td>
+                    </tr>
+                }
+            </table>
+        </fieldset>
+    </div>
+
+        <div class="comic-display" >
+        <fieldset>
+            <legend align="center"><h3>Registered Comics</h3></legend>
+            <table cellspacing="20">
+                <tr>
+                    <th>Comicid</th>
+                    <th>User id</th>
+                    <th>Published On</th>
+                    <th>Heroes</th>
+                    <th>Authors</th>
+                    <th>Categories</th>
+                </tr>
+                @for(subscription <- subscriptions){
+                    <tr>
+                        <td>@subscription.id</td>
+                        <td>@subscription.userId</td>
+                        <td>@subscription.publishedOn</td>
+                        <td>@subscription.heroes</td>
+                        <td>@subscription.authors</td>
+                        <td>@subscription.comicTypes</td>
+                        <td><a href="@routes.SubscriptionController.deleteSubscription(subscription.id)">delete</a></td>
+                    </tr>
+                }
+            </table>
+        </fieldset>
+    </div>
+
+}

@@ -1,0 +1,28 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+#GET     /                           controllers.ApplicationController.index
+#POST    /add                        controllers.ApplicationController.addUser
+#GET     /delete/:id                 controllers.ApplicationController.deleteUser(id : Long)
+
+# User pages
+GET 	/users							  controllers.UserController.index
+POST    /users/add                        controllers.UserController.addUser
+GET     /users/delete/:id                 controllers.UserController.deleteUser(id : Long)
+
+# Commic pages
+GET 	/comics							   controllers.ComicController.comic
+POST    /comics/add                        controllers.ComicController.addComic
+GET     /comics/delete/:id                 controllers.ComicController.deleteComic(id : Long)
+
+# Subscription pages
+GET 	/subscriptions							   controllers.SubscriptionController.subscription
+POST    /subscriptions/add/                        controllers.SubscriptionController.addSubscription
+GET     /subscriptions/delete/:id                 controllers.SubscriptionController.deleteSubscription(id : Long)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+

@@ -1,0 +1,10 @@
+[0m[[31merror[0m] [0m/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/app/controllers/ComicController.scala:16: missing parameter type[0m
+[0m[[31merror[0m] [0m    implicit request =>[0m
+[0m[[31merror[0m] [0m             ^[0m
+[0m[[31merror[0m] [0m/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/app/controllers/ComicController.scala:17: not found: value SubscriptionService[0m
+[0m[[31merror[0m] [0m    SubscriptionService.listAllSubscriptions map { comics =>[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/Users/MeanMachine/Desktop/x.ai/play-slick3-steps/app/views/comic.scala.html:147: not found: value subscriptions[0m
+[0m[[31merror[0m] [0m                @for(subscription <- subscriptions){[0m
+[0m[[31merror[0m] [0m                                     ^[0m
+[0m[[31merror[0m] [0mthree errors found[0m
